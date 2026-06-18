@@ -144,8 +144,8 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
 <nav class="cats">
   <ul>
     <li><a href="#cat-pipeline">Breeding Pipeline</a></li>
-    <li><a href="#cat-field">Field &amp; Trials</a></li>
-    <li><a href="#cat-analysis">Analysis &amp; Data</a></li>
+    <li><a href="#cat-tools">Breeding Tools</a></li>
+    <li><a href="#cat-varieties">Varieties</a></li>
     <li><button class="gate-btn" id="gateBtn">◈ Team access</button></li>
   </ul>
 </nav>
@@ -154,7 +154,7 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
 
     <section class="cat" id="cat-pipeline">
       <header class="cat-head">
-        <h2>Breeding Pipeline</h2>
+        <h2>Peanut Breeding Pipeline</h2>
       </header>
       <div class="grid">
       <article class="card" data-cat="pipeline" tabindex="0" data-href="https://go.ncsu.edu/pbg-cross">
@@ -183,15 +183,8 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
           <p class="card-desc">Build entry lists, carry line names between stages, and update seed sources.</p>
           <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-entry" target="_blank" rel="noopener">Open app →</a></div>
         </div>
-      </article></div>
-    </section>
-
-    <section class="cat" id="cat-field">
-      <header class="cat-head">
-        <h2>Field &amp; Trials</h2>
-      </header>
-      <div class="grid">
-      <article class="card" data-cat="field" tabindex="0" data-href="https://go.ncsu.edu/pbg-trial">
+      </article>
+      <article class="card" data-cat="pipeline" tabindex="0" data-href="https://go.ncsu.edu/pbg-trial">
         <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><rect x="14" y="14" width="72" height="72" rx="2"/><path d="M38 14 V86 M62 14 V86 M14 38 H86 M14 62 H86"/><path d="M22 22 h12 v20 h-12 M22 22 v20" stroke-width="4" opacity="0.0"/></svg></div>
         <div class="card-top"></div>
         <h3 class="card-title">PBG Trial</h3>
@@ -200,32 +193,7 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
           <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-trial" target="_blank" rel="noopener">Open app →</a></div>
         </div>
       </article>
-      <article class="card" data-cat="field" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-qrscanner">
-        <div class="card-motif"><svg viewBox="0 0 100 100" fill="currentColor"><rect x="14" y="14" width="22" height="22"/><rect x="20" y="20" width="10" height="10" fill="#fff"/><rect x="64" y="14" width="22" height="22"/><rect x="70" y="20" width="10" height="10" fill="#fff"/><rect x="14" y="64" width="22" height="22"/><rect x="20" y="70" width="10" height="10" fill="#fff"/><rect x="48" y="14" width="8" height="8"/><rect x="48" y="30" width="8" height="8"/><rect x="64" y="48" width="8" height="8"/><rect x="80" y="48" width="6" height="8"/><rect x="48" y="48" width="8" height="8"/><rect x="48" y="64" width="8" height="8"/><rect x="64" y="64" width="8" height="8"/><rect x="78" y="78" width="8" height="8"/></svg></div>
-        <div class="card-top"><span class="lock" title="Team tool" aria-label="Locked, team access required"><svg class="lock-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 V11"/></svg><svg class="lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0"/></svg></span></div>
-        <h3 class="card-title">PBG QR Scanner</h3>
-        <div class="card-reveal">
-          <p class="card-desc">Scan plot QR codes in the field to record ratings, then append sessions to trial files in shared storage.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-qrscanner" target="_blank" rel="noopener">Open app →</a></div>
-        </div>
-      </article>
-      <article class="card" data-cat="field" tabindex="0" data-href="https://github.com/ncsu-pbg/pbg-grading">
-        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="20" r="3"/><path d="M50 23 V76 M36 80 H64 M44 80 q6 -4 12 0"/><path d="M22 32 H78"/><path d="M22 32 L14 50 M22 32 L30 50 M14 50 a8 5 0 0 0 16 0"/><path d="M78 32 L70 50 M78 32 L86 50 M70 50 a8 5 0 0 0 16 0"/></svg></div>
-        <div class="card-top"></div>
-        <h3 class="card-title">PBG Grading</h3>
-        <div class="card-reveal">
-          <p class="card-desc">Grade harvested samples and compute quality measures. Source-only — download or clone to run locally.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://github.com/ncsu-pbg/pbg-grading/archive/HEAD.zip">Download .zip</a><a class="btn btn-ghost" href="https://github.com/ncsu-pbg/pbg-grading" target="_blank" rel="noopener">View repo</a></div>
-        </div>
-      </article></div>
-    </section>
-
-    <section class="cat" id="cat-analysis">
-      <header class="cat-head">
-        <h2>Analysis &amp; Data</h2>
-      </header>
-      <div class="grid">
-      <article class="card" data-cat="analysis" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-analysis">
+      <article class="card" data-cat="pipeline" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-analysis">
         <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 78 H86"/><rect x="24" y="52" width="12" height="26"/><rect x="44" y="38" width="12" height="40"/><rect x="64" y="58" width="12" height="20"/><path d="M14 34 C30 34 30 16 50 16 C70 16 70 34 86 34" stroke-width="3"/></svg></div>
         <div class="card-top"><span class="lock" title="Team tool" aria-label="Locked, team access required"><svg class="lock-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 V11"/></svg><svg class="lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0"/></svg></span></div>
         <h3 class="card-title">PBG Analysis</h3>
@@ -234,7 +202,7 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
           <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-analysis" target="_blank" rel="noopener">Open app →</a></div>
         </div>
       </article>
-      <article class="card" data-cat="analysis" tabindex="0" data-href="https://go.ncsu.edu/pbg-program">
+      <article class="card" data-cat="pipeline" tabindex="0" data-href="https://go.ncsu.edu/pbg-program">
         <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><rect x="14" y="16" width="34" height="30" rx="3"/><rect x="54" y="16" width="32" height="30" rx="3"/><rect x="14" y="54" width="72" height="30" rx="3"/><path d="M20 70 l8 -8 l8 6 l10 -12" stroke-width="3"/></svg></div>
         <div class="card-top"></div>
         <h3 class="card-title">PBG Program</h3>
@@ -243,13 +211,126 @@ footer{border-top:1px solid var(--line); padding:24px; text-align:center; color:
           <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-program" target="_blank" rel="noopener">Open app →</a></div>
         </div>
       </article>
-      <article class="card" data-cat="analysis" tabindex="0" data-href="https://go.ncsu.edu/pbg-varieties">
+      <article class="card" data-cat="pipeline" tabindex="0" data-href="https://go.ncsu.edu/pbg-varieties">
         <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M30 60 C30 40 46 26 66 26 C66 46 50 60 30 60 Z"/><path d="M30 60 C40 50 52 42 66 36"/><circle cx="44" cy="50" r="20"/><path d="M58 64 L80 84" stroke-width="5"/></svg></div>
         <div class="card-top"></div>
         <h3 class="card-title">PBG Varieties</h3>
         <div class="card-reveal">
           <p class="card-desc">Mobile-friendly field lookup for varieties and entries. Open it on your phone.</p>
           <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-varieties" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="pipeline" tabindex="0" data-href="https://go.ncsu.edu/pbg-coldroom">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><rect x="16" y="34" width="46" height="46" rx="2"/><path d="M16 57 H62 M39 34 V80"/><g stroke-width="2.6"><path d="M74 16 V40 M63.6 22 L84.4 34 M63.6 34 L84.4 22"/></g></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG Coldroom</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Cold-room seed inventory for the breeding and genetics program.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-coldroom" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article></div>
+    </section>
+
+    <section class="cat" id="cat-tools">
+      <header class="cat-head">
+        <h2>Peanut Breeding Tools</h2>
+      </header>
+      <div class="grid">
+      <article class="card" data-cat="tools" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-qrscanner">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="currentColor"><rect x="14" y="14" width="22" height="22"/><rect x="20" y="20" width="10" height="10" fill="#fff"/><rect x="64" y="14" width="22" height="22"/><rect x="70" y="20" width="10" height="10" fill="#fff"/><rect x="14" y="64" width="22" height="22"/><rect x="20" y="70" width="10" height="10" fill="#fff"/><rect x="48" y="14" width="8" height="8"/><rect x="48" y="30" width="8" height="8"/><rect x="64" y="48" width="8" height="8"/><rect x="80" y="48" width="6" height="8"/><rect x="48" y="48" width="8" height="8"/><rect x="48" y="64" width="8" height="8"/><rect x="64" y="64" width="8" height="8"/><rect x="78" y="78" width="8" height="8"/></svg></div>
+        <div class="card-top"><span class="lock" title="Team tool" aria-label="Locked, team access required"><svg class="lock-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 V11"/></svg><svg class="lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0"/></svg></span></div>
+        <h3 class="card-title">PBG QRScanner</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Scan plot QR codes in the field to record ratings, then append sessions to trial files in shared storage.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-qrscanner" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" tabindex="0" data-href="https://github.com/ncsu-pbg/pbg-grading">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="20" r="3"/><path d="M50 23 V76 M36 80 H64 M44 80 q6 -4 12 0"/><path d="M22 32 H78"/><path d="M22 32 L14 50 M22 32 L30 50 M14 50 a8 5 0 0 0 16 0"/><path d="M78 32 L70 50 M78 32 L86 50 M70 50 a8 5 0 0 0 16 0"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG Grading</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Grade harvested samples and compute quality measures. Source-only — download or view to run locally.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://github.com/ncsu-pbg/pbg-grading/archive/HEAD.zip">Download .zip</a><a class="btn btn-ghost" href="https://github.com/ncsu-pbg/pbg-grading" target="_blank" rel="noopener">View repo</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-qsorter">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 24 H80 L56 54 V72 H44 V54 Z"/><circle cx="36" cy="33" r="3"/><circle cx="50" cy="35" r="3"/><circle cx="64" cy="33" r="3"/><path d="M50 72 V86"/></svg></div>
+        <div class="card-top"><span class="lock" title="Team tool" aria-label="Locked, team access required"><svg class="lock-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 V11"/></svg><svg class="lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0"/></svg></span></div>
+        <h3 class="card-title">PBG QSorter</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Analyze kernel samples with the QualySense QSorter for kernel size and oleic-acid composition.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-qsorter" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" tabindex="0" data-href="https://go.ncsu.edu/pbg-nir">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M16 20 V78 H86"/><path d="M18 70 C30 70 28 38 38 38 C46 38 46 58 54 58 C62 58 60 28 72 28 C82 28 80 64 86 56"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG NIR</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Analyze raw near-infrared (NIR) spectra from the QualySense QSorter.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-nir" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" tabindex="0" data-href="https://go.ncsu.edu/pbg-oleic">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M50 16 C50 16 76 48 76 64 a26 26 0 0 1 -52 0 C24 48 50 16 50 16 Z"/><path d="M38 64 a12 12 0 0 0 12 12"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG Oleic</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Analyze raw QualySense QSorter reports for oleic-acid seed purity.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-oleic" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" tabindex="0" data-href="https://go.ncsu.edu/pbg-opentrons">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><rect x="16" y="52" width="68" height="32" rx="3"/><g fill="currentColor" stroke="none"><circle cx="28" cy="62" r="2.6"/><circle cx="42" cy="62" r="2.6"/><circle cx="56" cy="62" r="2.6"/><circle cx="70" cy="62" r="2.6"/><circle cx="28" cy="74" r="2.6"/><circle cx="42" cy="74" r="2.6"/><circle cx="56" cy="74" r="2.6"/><circle cx="70" cy="74" r="2.6"/></g><path d="M50 14 H62 L60 30 H52 Z"/><path d="M56 30 V40 M53 37 L56 45 L59 37"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG Opentrons</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Develop Opentrons pipetting-robot protocols for DNA normalization.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-opentrons" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" tabindex="0" data-href="https://go.ncsu.edu/pbg-snpcaller">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 18 V82 H82"/><g fill="currentColor" stroke="none"><circle cx="32" cy="34" r="3"/><circle cx="40" cy="30" r="3"/><circle cx="36" cy="42" r="3"/><circle cx="44" cy="38" r="3"/><circle cx="62" cy="64" r="3"/><circle cx="70" cy="58" r="3"/><circle cx="66" cy="70" r="3"/><circle cx="74" cy="64" r="3"/></g></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG SNPCaller</h3>
+        <div class="card-reveal">
+          <p class="card-desc">Analyze KASP / PACE marker fluorophore output from the plate reader.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-snpcaller" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tools" data-team="1" tabindex="0" data-href="https://go.ncsu.edu/pbg-flavor">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="32"/><circle cx="50" cy="50" r="13"/><path d="M50 18 V37 M50 63 V82 M18 50 H37 M63 50 H82 M27.4 27.4 L40 40 M72.6 27.4 L60 40 M27.4 72.6 L40 60 M72.6 72.6 L60 60"/></svg></div>
+        <div class="card-top"><span class="lock" title="Team tool" aria-label="Locked, team access required"><svg class="lock-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 V11"/></svg><svg class="lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0"/></svg></span></div>
+        <h3 class="card-title">PBG Flavor</h3>
+        <div class="card-reveal">
+          <p class="card-desc">U.S. peanut breeding program flavor data collection repository.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-flavor" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article></div>
+    </section>
+
+    <section class="cat" id="cat-varieties">
+      <header class="cat-head">
+        <h2>Peanut Breeding Program Varieties</h2>
+      </header>
+      <div class="grid">
+      <article class="card" data-cat="varieties" tabindex="0" data-href="https://go.ncsu.edu/pbg-nc25">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M50 84 V46"/><path d="M50 58 C35 58 27 46 26 33 C41 33 50 43 50 55"/><path d="M50 50 C65 50 73 38 74 25 C59 25 50 35 50 47"/><path d="M38 84 H62"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG NC25</h3>
+        <div class="card-reveal">
+          <p class="card-desc">N.C. 25 release information.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-nc25" target="_blank" rel="noopener">Open app →</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="varieties" tabindex="0" data-href="https://go.ncsu.edu/pbg-nc26">
+        <div class="card-motif"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M50 84 V46"/><path d="M50 58 C35 58 27 46 26 33 C41 33 50 43 50 55"/><path d="M50 50 C65 50 73 38 74 25 C59 25 50 35 50 47"/><path d="M38 84 H62"/></svg></div>
+        <div class="card-top"></div>
+        <h3 class="card-title">PBG NC26</h3>
+        <div class="card-reveal">
+          <p class="card-desc">N.C. 26 release information.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://go.ncsu.edu/pbg-nc26" target="_blank" rel="noopener">Open app →</a></div>
         </div>
       </article></div>
     </section>
