@@ -356,10 +356,65 @@ footer{margin-top:64px; border-top:1px solid var(--line); padding:24px; text-ali
 <div class="toast" id="toast"></div>
 
 <script>
-// ---- DEMO passcode. In a real static site this only hides cards from casual
-// visitors; it is NOT security. Real protection = private repos + the apps' own
-// Dropbox auth. Swap this for that approach before relying on it.
-const DEMO_PASS = "NC$UPe@nut1";
+// ---- Team passcode is stored ONLY as a SHA-256 hash, never in plaintext.
+// The typed value is hashed and compared, so the password never appears in
+// page source. (Client-side gating is obscurity, not security; real protection
+// stays in private repos + each app's own login.)
+
+function sha256(ascii){
+  function rightRotate(value, amount){ return (value>>>amount) | (value<<(32-amount)); }
+  var mathPow = Math.pow, maxWord = mathPow(2, 32), result = '', words = [], i, j;
+  var asciiBitLength = ascii.length*8;
+  var hash = sha256.h = sha256.h || [];
+  var k = sha256.k = sha256.k || [];
+  var primeCounter = k.length, isComposite = {};
+  for (var candidate = 2; primeCounter < 64; candidate++) {
+    if (!isComposite[candidate]) {
+      for (i = 0; i < 313; i += candidate) { isComposite[i] = candidate; }
+      hash[primeCounter] = (mathPow(candidate, .5)*maxWord)|0;
+      k[primeCounter++] = (mathPow(candidate, 1/3)*maxWord)|0;
+    }
+  }
+  ascii += '\x80';
+  while (ascii.length%64 - 56) ascii += '\x00';
+  for (i = 0; i < ascii.length; i++) {
+    j = ascii.charCodeAt(i);
+    if (j>>8) return;
+    words[i>>2] |= j << ((3 - i)%4)*8;
+  }
+  words[words.length] = ((asciiBitLength/maxWord)|0);
+  words[words.length] = (asciiBitLength);
+  for (j = 0; j < words.length;) {
+    var w = words.slice(j, j += 16), oldHash = hash;
+    hash = hash.slice(0, 8);
+    for (i = 0; i < 64; i++) {
+      var w15 = w[i - 15], w2 = w[i - 2], a = hash[0], e = hash[4];
+      var temp1 = hash[7]
+        + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25))
+        + ((e&hash[5])^((~e)&hash[6])) + k[i]
+        + (w[i] = (i < 16) ? w[i] : (
+            w[i - 16]
+            + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15>>>3))
+            + w[i - 7]
+            + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2>>>10))
+          )|0);
+      var temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22))
+        + ((a&hash[1])^(a&hash[2])^(hash[1]&hash[2]));
+      hash = [(temp1 + temp2)|0].concat(hash);
+      hash[4] = (hash[4] + temp1)|0;
+    }
+    for (i = 0; i < 8; i++) { hash[i] = (hash[i] + oldHash[i])|0; }
+  }
+  for (i = 0; i < 8; i++) {
+    for (j = 3; j + 1; j--) {
+      var b = (hash[i]>>(j*8))&255;
+      result += ((b < 16) ? 0 : '') + b.toString(16);
+    }
+  }
+  return result;
+}
+
+const PASS_HASH = "17b34326a374ea90370d30660f180064fc751a46bd5e081fdde33129818ef33e";
 
 const body = document.body, modal = document.getElementById('modal');
 const gateBtn = document.getElementById('gateBtn');
@@ -381,7 +436,7 @@ passInput.addEventListener('keydown', e=>{ if(e.key==='Enter') tryUnlock(); });
 modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
 
 function tryUnlock(){
-  if(passInput.value === DEMO_PASS){
+  if(sha256(passInput.value) === PASS_HASH){
     body.classList.add('team-unlocked'); gateBtn.classList.add('unlocked');
     gateBtn.textContent='◈ Team unlocked'; closeModal(); toast('Team tools unlocked');
   } else { passErr.textContent = 'Incorrect passcode.'; }
