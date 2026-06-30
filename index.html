@@ -414,7 +414,10 @@ function sha256(ascii){
   return result;
 }
 
-const PASS_HASH = "17b34326a374ea90370d30660f180064fc751a46bd5e081fdde33129818ef33e";
+const PASS_HASHES = [
+  "17b34326a374ea90370d30660f180064fc751a46bd5e081fdde33129818ef33e",
+  "836a37743124795d38255d6e9279436b5112ff4210208f7a70ade727ff8d75b8"
+];
 
 const body = document.body, modal = document.getElementById('modal');
 const gateBtn = document.getElementById('gateBtn');
@@ -436,7 +439,7 @@ passInput.addEventListener('keydown', e=>{ if(e.key==='Enter') tryUnlock(); });
 modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
 
 function tryUnlock(){
-  if(sha256(passInput.value) === PASS_HASH){
+  if(PASS_HASHES.includes(sha256(passInput.value))){
     body.classList.add('team-unlocked'); gateBtn.classList.add('unlocked');
     gateBtn.textContent='◈ Team unlocked'; closeModal(); toast('Team tools unlocked');
   } else { passErr.textContent = 'Incorrect passcode.'; }
